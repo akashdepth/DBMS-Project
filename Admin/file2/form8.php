@@ -1,0 +1,73 @@
+<html>
+<head>
+<body style="background-color:#E5CCC9">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	<div class="navbar-header" style="padding-left:2%">
+		<a href="http://localhost/Admin/file2/form1.php" style="font-size:14px">Home</a>
+	</div>
+
+	<div class="nav navbar-nav">
+	<ul class="nav navbar-nav" class="select">
+	<li>
+		<a href="http://localhost/Admin/file2/form5.php" style="left:30%" >Ticket And Finance</a>
+	</li>
+	<li class="selected" >
+	<a href="http://localhost/Admin/file2/userform.php" style="left:30%">User Information</a></li>
+	<li >
+	<a href="httP://localhost/Admin/file2/form1.php" style="left:930%">Sign Out</a></li>
+	</ul>
+	</div>
+	</div>
+	</nav>
+<img src="image1.jpg" align="right" style="width:120px;height:120px">
+<div class="panel panel-success" style="max-width:60%">
+</div>
+</body>
+</head>
+</html>
+<?php
+$var1=$_POST['name1'];
+$DBServer='localhost';
+$DBUser='root';
+$DBPass='';
+$DBName='IPL2k16';
+$conn=$conn=mysqli_connect($DBServer,$DBUser,$DBPass,$DBName);
+$sql="select * from User where UserId like '$var1' ";
+$result=$conn->query($sql);
+$var2=0;
+while($rows=mysqli_fetch_assoc($result))
+{
+$var2++;
+}
+if($var2==0)
+{
+echo "<x1 style=font-size:20px>No User Record of userid $var1 found </x1>";
+}
+else
+{
+echo "<x1 style=font-size:25px>Displaying User list <br /><br /></x1>";
+$sql="select * from User where UserId like '$var1' ";
+$result=mysqli_query($conn,$sql);
+echo "<table border=1 width=100%><tr><th>UserId</th><th>Email</th><th>Fname</th><th>Lname</th><th>Gender</th><th>DateOfBirth</th><th>MobileNo</th></tr>";
+while($rows=mysqli_fetch_assoc($result))
+{
+$x=$rows['Gender'];
+$y=0;
+$sex;
+if($x==$y)
+{
+$sex="Female";
+}
+else
+$sex="Male";
+  echo "<tr><td>{$rows['UserId']}</td><td>{$rows['Email']}</td><td>{$rows['Fname']}</td><td>{$rows['Lname']}</td><td>$sex</td><td>{$rows['DateOfBirth']}</td><td>{$rows['MobileNo']}</td></tr>";
+}
+echo "</table>";
+}
+?>

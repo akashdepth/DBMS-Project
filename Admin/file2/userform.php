@@ -1,0 +1,47 @@
+<html>
+<body background="school.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css rel="stylesheet">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	<div class="navbar-header" style="padding-left:2%">
+		<a href="http://localhost/Admin/file2/form2.php" style="font-size:14px">Home</a>
+	</div>
+
+	<div class="nav navbar-nav">
+	<ul class="nav navbar-nav">
+	<li>
+		<a href="http://localhost/Admin/file2/form5.php" style="left:30%" >Ticket And Finance</a>
+	</li>
+	<li class="active" >
+	<a href="http://localhost/Admin/file2/userform.php" style="left:30%">User Information</a></li>
+	<li >
+	<a href="httP://localhost/Admin/file2/form1.php" style="left:930%">Sign Out</a></li>
+	</ul>
+	</div>
+	</div>
+	</nav>
+
+<form method="post" action=form8.php>
+<div class="panel panel-success" style="max-width:100%" style="max-height:70%">
+<div class="panel-heading">For User Information</div> <br /><br />
+<div class="panel-body">
+<x1 style=font-size:20px>Display userlist by UserId </x1><input type="text" name="name1" id="name1" style=margin-left:20% placeholder="Enter Id" ></input><input type="submit" style=margin-left:14%></input>
+</form>
+<form method="post" action=form9.php>
+<br />
+<x1 style=font-size:20px>Display userlist by FirstName </x1><input type="text" name="name1" id="name1" style=margin-left:17.3% placeholder="First Name"></input><input type="submit" style=margin-left:14%></input></div>
+<script type="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

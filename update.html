@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+    <head>
+		<link rel="stylesheet" href="update_page.css">
+		<title>IPL 2k16: Update your Profile</title>
+    </head>
+	<script type="text/javascript" >  
+    
+		function disableMyText(checkMe,myText){  
+          if(document.getElementById(checkMe).checked == true){  
+              document.getElementById(myText).disabled = false;  
+          }
+		  else{
+            document.getElementById(myText).disabled = true;
+          }  
+     }  
+     </script> 
+    <body>
+        <table width="500" border="0" cellpadding="3" cellspacing="1">
+    <tr>
+        <form method="post" action="edit.php" align="right">
+            <div id="wrapper" data-role="fieldcontain">
+                
+				<tr>
+                <td width="200">UserId:</td><td></td>
+                <td width="450"><input type="text" name="UserId" value="" disabled /> </td>
+                </tr>
+				
+                <tr><td width="200">Email:</td>
+				<td><input type="checkbox" id="b1" name="checkMe" onclick="disableMyText('b1','b2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="b2" /> </td>
+                </tr>
+				
+                <tr><td width="200">First name:</td>
+                <td><input type="checkbox" id="c1" name="checkMe" onclick="disableMyText('c1','c2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="c2" />
+                </tr>
+				
+                <tr><td width="200">Last name:</td>
+                <td><input type="checkbox" id="d1" name="checkMe" onclick="disableMyText('d1','d2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="d2" /></td>
+                </tr>
+				
+                <tr><td width="200">Gender:</td>
+                <td><input type="checkbox" id="e1" name="checkMe" onclick="disableMyText('e1','e2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="e2" /></td>
+                </tr>
+				
+                <tr><td width="200">Date Of Birth:</td>
+                <td><input type="checkbox" id="f1" name="checkMe" onclick="disableMyText('f1','f2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="f2" /></td>
+                </tr>
+				
+                <tr><td width="200">Address Id:</td>
+				<td><input type="checkbox" id="g1" name="checkMe" onclick="disableMyText('g1','g2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="g2" /></td>
+                </tr>
+				
+                <tr><td width="200">Password:</td>
+                <td><input type="checkbox" id="h1" name="checkMe" onclick="disableMyText('h1','h2')"/><br></td>
+                <td width="450"><input type="text" disabled  value="" id="h2" /></td>
+                </tr>
+				
+                <tr><td width="200">Mobile Number:</td>
+                <td><input type="checkbox" id="i1" name="checkMe" onclick="disableMyText('i1','i2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="i2" /></td>
+                </tr>
+				
+                <tr><td width="200">About Me:</td>
+                <td><input type="checkbox" id="j1" name="checkMe" onclick="disableMyText('j1','j2')"/><br></td>
+                <td width="450"><input type="text" disabled value="" id="j2" /></td>
+                </tr>
+                       
+				<tr>
+					<td colspan="2">
+						<button data-theme="b" id="Submit" type="submit" value="Submit">Submit</button>
+					</td>
+					<td><button data-theme="b" id="reset" type="reset" value="reset">Reset</button></td>
+				</tr>
+				<tr>
+			</div>
+		</form>
+	</tr>
+</table>
+    <body>
+</html>
